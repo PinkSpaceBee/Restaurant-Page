@@ -1,0 +1,18 @@
+class Navbar {
+    constructor (parent, main, menu, contacts) {
+        this.parent = parent;
+        this.main = main;
+        this.menu = menu;
+        this.contacts = contacts;
+    }
+
+    appendLink(...children) {
+        for (const child of children) {
+            this.parent.appendChild(child);
+        }
+    }
+}
+
+export {
+    Navbar
+}
