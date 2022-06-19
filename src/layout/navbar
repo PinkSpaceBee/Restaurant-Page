@@ -5,14 +5,41 @@ class Navbar {
         this.menu = menu;
         this.contacts = contacts;
     }
+    restaurantName = 'GenericRestaurant'
 
     appendLink(...children) {
         for (const child of children) {
             this.parent.appendChild(child);
+            child.href = '#';
+            child.classList.add(`${child.textContent}-nav`, 'navlink');
+            // ok but why did I need an event listener here? 
+            // child.addEventListener('click', () => {
+            //     child.classList.add(`${child.textContent}-nav`, 'navlink');
+            // })
         }
     }
 }
 
+const navbarDiv = document.createElement('nav');
+navbarDiv.classList.add('navbar');
+
+const main = document.createElement('a');
+const menu = document.createElement('a');
+const contacts = document.createElement('a');
+
+const navbar = new Navbar(navbarDiv, main, menu, contacts);
+
+main.textContent = 'main';
+menu.textContent = 'menu';
+contacts.textContent = 'contacts';
+
+navbar.appendLink(main, menu, contacts);
+
 export {
-    Navbar
+    //Navbar,
+    navbarDiv,
+    navbar,
+    //main,
+    //menu,
+    //contacts
 }
