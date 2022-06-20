@@ -12,12 +12,22 @@ class Navbar {
             this.parent.appendChild(child);
             child.href = '#';
             child.classList.add(`${child.textContent}-nav`, 'navlink');
-            // ok but why did I need an event listener here? 
-            // child.addEventListener('click', () => {
-            //     child.classList.add(`${child.textContent}-nav`, 'navlink');
-            // })
         }
     }
+
+    addDiv(wrapper, className, ...elems) {
+        for (const elem of elems) {
+            let temp = elem.classList.contains(className) ? elem : '';
+    
+            if (temp.tagName === 'SECTION') {
+                wrapper.appendChild(temp);
+            };
+        }
+    }
+    
+    highlightNavlink() {
+    }
+    
 }
 
 const navbarDiv = document.createElement('nav');
@@ -36,10 +46,6 @@ contacts.textContent = 'contacts';
 navbar.appendLink(main, menu, contacts);
 
 export {
-    //Navbar,
     navbarDiv,
     navbar,
-    //main,
-    //menu,
-    //contacts
 }
