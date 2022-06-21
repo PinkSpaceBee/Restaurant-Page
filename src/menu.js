@@ -31,7 +31,7 @@ const foodSectionDiv = menu.appendChild(document.createElement('div'));
 foodSectionDiv.appendChild(document.createElement('p')).textContent = 'Food';
 
 foodSection.forEach(elem => {
-    iterateObjects(elem);
+    iterateObjects(elem, foodSectionDiv);
 })
 
 // create markup for drinks section
@@ -39,13 +39,13 @@ const drinksSectionDiv = menu.appendChild(document.createElement('div'));
 drinksSectionDiv.appendChild(document.createElement('p')).textContent = 'Drinks';
 
 drinksSection.forEach(elem => {
-    iterateObjects(elem);
+    iterateObjects(elem, drinksSectionDiv);
 })
 
 // populate div with object values
-function iterateObjects(obj) {
+function iterateObjects(obj, container) {
     // iterate through the elements of an array; create a div for each object
-    const menuItemDiv = foodSectionDiv.appendChild(document.createElement('div'));
+    const menuItemDiv = container.appendChild(document.createElement('div'));
     for (const value of Object.values(obj)) {
         // iterate through the values of each object; create a p tag for every value
         for (const textValue of Object.values(value)) {
