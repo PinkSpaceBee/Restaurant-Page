@@ -6,9 +6,6 @@ class MenuItem {
     }
 }
 
-const menu = document.createElement('section');
-menu.classList.add('menu-nav');
-
 const foodSection = [
     {item1: new MenuItem('Strawberry mousse cake', '120 UAH', 'Strawberry and white chocolate mousse cake with sablé base')},
     {item2: new MenuItem('Sweet blackberry mousse tart', '95 UAH', 'Blackberry mousse tart has fresh blackberries, creamy cashew mousse, and a purple sweet potato tourbillon')},
@@ -26,22 +23,26 @@ const drinksSection =[
     {item6: new MenuItem('Tea', '35 UAH', '200 ml. Varieties of black, green, and herbal tea')}
 ];
 
-const foodSectionDiv = document.createElement('div');
+const menu = document.createElement('section');
+menu.classList.add('menu-nav');
+
+// create markup for food section
+const foodSectionDiv = menu.appendChild(document.createElement('div'));
 foodSectionDiv.appendChild(document.createElement('p')).textContent = 'Food';
-menu.appendChild(foodSectionDiv);
 
 foodSection.forEach(elem => {
     iterateObjects(elem);
 })
 
-const drinksSectionDiv = document.createElement('div');
-foodSectionDiv.appendChild(document.createElement('p')).textContent = 'Drinks';
-menu.appendChild(drinksSectionDiv);
+// create markup for drinks section
+const drinksSectionDiv = menu.appendChild(document.createElement('div'));
+drinksSectionDiv.appendChild(document.createElement('p')).textContent = 'Drinks';
 
 drinksSection.forEach(elem => {
     iterateObjects(elem);
 })
 
+// populate div with object values
 function iterateObjects(obj) {
     // iterate through the elements of an array; create a div for each object
     const menuItemDiv = foodSectionDiv.appendChild(document.createElement('div'));
@@ -53,8 +54,6 @@ function iterateObjects(obj) {
         }
     }
 }
-
-
 
 export {
     menu
