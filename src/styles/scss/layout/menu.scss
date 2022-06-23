@@ -1,0 +1,45 @@
+section.menu {
+    display: grid;
+
+    position:relative;
+    overflow:auto;
+
+    width: 86vw;
+
+    & > div {
+        display: grid;
+
+        div {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            justify-items: end;
+
+            margin-bottom: 1em;
+            padding: 0.4em;
+
+            color: mix($keppel, #000, 80%);
+
+            :first-child {
+                justify-self: start;
+            }
+
+            :last-child {
+                grid-column: 1/-1;
+                color: transparentize(mix($dorado, #000, 50%), 0.34);
+                font-size: 14px;
+            }
+        }
+    }
+
+    .title {
+        padding-left: 0.5em;
+        font-size: 26px;
+        color: $dorado;
+        background-color: mix($keppel, #fff, 20%);
+    }
+
+    p {
+        font-size: 16px;
+        margin: 0.3em;
+    }
+}
