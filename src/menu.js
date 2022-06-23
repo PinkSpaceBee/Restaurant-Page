@@ -24,11 +24,13 @@ const drinksSection =[
 ];
 
 const menu = document.createElement('section');
-menu.classList.add('menu-nav');
+menu.classList.add('menu-nav', 'menu');
 
 // create markup for food section
 const foodSectionDiv = menu.appendChild(document.createElement('div'));
-foodSectionDiv.appendChild(document.createElement('p')).textContent = 'Food';
+const foodTitle = foodSectionDiv.appendChild(document.createElement('p'))
+foodTitle.textContent = 'Food';
+foodTitle.classList.add('title');
 
 foodSection.forEach(elem => {
     iterateObjects(elem, foodSectionDiv);
@@ -36,7 +38,9 @@ foodSection.forEach(elem => {
 
 // create markup for drinks section
 const drinksSectionDiv = menu.appendChild(document.createElement('div'));
-drinksSectionDiv.appendChild(document.createElement('p')).textContent = 'Drinks';
+const drinksTitle = drinksSectionDiv.appendChild(document.createElement('p'))
+drinksTitle.textContent = 'Drinks';
+drinksTitle.classList.add('title');
 
 drinksSection.forEach(elem => {
     iterateObjects(elem, drinksSectionDiv);
