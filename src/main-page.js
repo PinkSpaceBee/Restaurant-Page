@@ -1,13 +1,14 @@
 const home = document.createElement('section');
 home.classList.add('home-nav');
 
-home.appendChild(document.createElement('p')).textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
+home.appendChild(document.createElement('p')).textContent = 'Lorem ipsum dolor';
+home.appendChild(document.createElement('p')).textContent = 'Sit amet, consectetur adipiscing elit. Sed ornare faucibus';
 
-home.appendChild(document.createElement('img')).src = './img/cake-main-page.jpg';
 
-const menuBtn = home.appendChild(document.createElement('button')).textContent = 'Open menu';
+const menuBtn = home.appendChild(document.createElement('button'))
+menuBtn.textContent = 'Open menu';
 
-home.appendChild
 export {
-    home
+    home,
+    menuBtn
 }
