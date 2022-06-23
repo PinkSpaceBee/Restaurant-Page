@@ -15,12 +15,12 @@ const foodSection = [
 ];
 
 const drinksSection =[
-    {item1: new MenuItem('Double ristretto', '30 UAH', '30 ml')},
-    {item2: new MenuItem('Espresso', '30 UAH', '60 ml')},
-    {item3: new MenuItem('Caffe lungo', '35 UAH', '130 ml')},
-    {item4: new MenuItem('Latte', '55 UAH', '150 ml. Includes decaf, vegan, and lactose-free options')},
-    {item5: new MenuItem('Cappuccino', '55 UAH', '130 ml. Includes decaf, vegan, and lactose-free options')},
-    {item6: new MenuItem('Tea', '35 UAH', '200 ml. Varieties of black, green, and herbal tea')}
+    {item1: new MenuItem('Double ristretto', '30 UAH', 'Has a slightly sweeter, more concentrated flavor than espresso, 30ml')},
+    {item2: new MenuItem('Espresso', '30 UAH', 'A small shot of coffee, 30 ml. Can also be served as a double shot. ')},
+    {item3: new MenuItem('Caffe lungo', '35 UAH', 'A single espresso shot with more water, 130 ml')},
+    {item4: new MenuItem('Latte', '55 UAH', 'Includes decaf, vegan, and lactose-free options, 150ml')},
+    {item5: new MenuItem('Cappuccino', '55 UAH', 'Includes decaf, vegan, and lactose-free options, 130ml')},
+    {item6: new MenuItem('Tea', '35 UAH', 'Varieties of black, green, and herbal tea, 200ml')}
 ];
 
 const menu = document.createElement('section');
