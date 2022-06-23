@@ -1,0 +1,42 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, fit-content(100%));
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+
+    margin: 0.6em 0 0 0;
+
+    height: 100%;
+
+    @include for-big-desktop;
+    @include for-desktop;
+    @include for-tablet {
+        grid-template-columns: 3fr repeat(3, 0.5fr);
+    }
+
+    :first-child {
+        font: 46px $ms-madi;
+
+        color: $keppel;
+
+        @include for-phone-landscape;
+        @include for-phone {
+            grid-column: 1/-1;
+        }
+    }
+
+    a {
+        margin: 0 1em;
+
+        font: $regular 20px $poppins;
+        text-decoration: none;
+        color: $dorado;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline $dorado;
+            text-underline-position: under;
+        }
+    }
+}
