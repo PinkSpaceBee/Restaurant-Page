@@ -1,0 +1,39 @@
+section.home-nav {
+    display: grid;
+    grid-template-rows: 25% 35% 40%;
+
+    background: no-repeat center/100% url("/src/styles/scss/img/back-main-page-5.jpg");
+
+    & p {
+        font-size: 26px;
+        background-color: transparentize(mix($keppel, #000, 50%), 0.68);
+        color: mix($mandys-pink, #fff,10%);
+        text-shadow: mix($dorado, #000, 20%) 1px 0 6px;
+        margin: 0 2rem;
+        padding: 0;
+
+        &:first-of-type {
+            margin-top: 2rem;
+            font: 32px $ms-madi;
+            padding-top: 3rem;
+        }
+    }
+
+    button {
+        margin: 1em;
+        height: 3em;
+        width: 9em;
+
+        font: 20px $poppins;
+        color: $keppel;
+        background-color: transparentize(mix($mandys-pink, #fff,10%), 0.2);
+        border: 2px solid $keppel;
+
+        &:hover,
+        &:focus,
+        &:active {
+            transform: scale(1.05);
+            background-color: mix($mandys-pink, #fff,10%);
+        }
+    }
+}
