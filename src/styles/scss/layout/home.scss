@@ -4,6 +4,7 @@ section.home-nav {
 
     background: no-repeat center/100% url("/src/styles/scss/img/back-main-page-5.jpg");
 
+    // lorem ipsum
     & p {
         font-size: 26px;
         background-color: transparentize(mix($keppel, #000, 50%), 0.68);
@@ -12,13 +13,24 @@ section.home-nav {
         margin: 0 2rem;
         padding: 0;
 
+        @include for-phone-landscape {
+            margin: 0 2rem;
+            }
+
+
         &:first-of-type {
             margin-top: 2rem;
             font: 32px $ms-madi;
             padding-top: 3rem;
+
+            @include for-phone-landscape {
+                margin: 0 2rem;
+                padding: 1.5rem;
+                }
         }
     }
 
+    // opem menu button
     button {
         margin: 1em;
         height: 3em;
@@ -35,5 +47,9 @@ section.home-nav {
             transform: scale(1.05);
             background-color: mix($mandys-pink, #fff,10%);
         }
+
+        @include for-phone-landscape {
+            margin: 1rem 2rem;
+            }
     }
 }

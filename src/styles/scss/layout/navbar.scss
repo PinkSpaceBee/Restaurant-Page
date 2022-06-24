@@ -1,30 +1,54 @@
 nav {
     display: grid;
-    grid-template-columns: repeat(3, fit-content(100%));
     grid-template-rows: 1fr 1fr;
     justify-items: center;
+    justify-self: center;
 
-    margin: 0.6em 0 0 0;
+    padding: 0.6em 0 0 0;
 
     height: 100%;
+    width: 100vw;
 
-    @include for-big-desktop;
-    @include for-desktop;
-    @include for-tablet {
-        grid-template-columns: 3fr repeat(3, 0.5fr);
+    box-shadow: transparentize(mix($dorado, #000, 50%), 0.8) 0px 4px 12px;
+
+    @include for-phone-landscape {
+        grid-template-columns: 3fr 4fr;
+        grid-template-rows: 1 100%;
     }
-
-    :first-child {
+    
+    // cafe name
+    span {
+        padding-right: 0.2em;
         font: 46px $ms-madi;
-
         color: $keppel;
 
-        @include for-phone-landscape;
+        @include for-phone-landscape {
+            font-size: 36px;
+        };
         @include for-phone {
             grid-column: 1/-1;
         }
     }
 
+    // link wrapper
+    div {
+        display: grid;
+        justify-self: center;
+
+        grid-template-columns: repeat(3, fit-content(100%));
+
+        @include for-phone-landscape {
+            align-items: center;
+        }
+
+        @include for-big-desktop;
+        @include for-desktop;
+        @include for-tablet {
+            grid-template-columns: 3fr repeat(3, 0.5fr);
+        }
+    }
+
+    // navlinks
     a {
         margin: 0 1em;
 

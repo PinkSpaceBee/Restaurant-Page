@@ -1,0 +1,21 @@
+body {
+    position:relative;
+    overflow:auto;
+
+    margin: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    font: 20px $poppins;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 18% 82%;
+    justify-items: center;
+
+    height: 100%;
+
+    font-size: 20px;
+}

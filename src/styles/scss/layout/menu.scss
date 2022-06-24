@@ -4,17 +4,21 @@ section.menu {
     position:relative;
     overflow:auto;
 
+    margin-top: 2em;
+
     width: 86vw;
 
+    // food and drinks sections; 2 divs in total
     & > div {
         display: grid;
 
+        // item card
         div {
             display: grid;
             grid-template-columns: 2.5fr 1fr;
             justify-items: end;
 
-            margin-bottom: 1em;
+            margin-bottom: 0.4em;
             padding: 0.4em;
 
             color: mix($keppel, #000, 80%);
@@ -25,6 +29,8 @@ section.menu {
 
             :last-child {
                 grid-column: 1/-1;
+                justify-self: start;
+                
                 color: transparentize(mix($dorado, #000, 50%), 0.34);
                 font-size: 14px;
             }

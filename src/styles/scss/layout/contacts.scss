@@ -1,0 +1,25 @@
+section.contacts-nav {
+    margin-top: 2em;
+
+    position:relative;
+    overflow:auto;
+
+    width: 90vw;
+
+    font-size: 16px;
+
+    p {
+        margin: 0.5em 0;
+    }
+
+    :first-child {
+        color: $keppel;
+        font: $medium 26px $poppins;
+    }
+
+    .map-preview {
+        width: 86vw;
+        height: 40vh;
+        border: none;
+    }
+}
