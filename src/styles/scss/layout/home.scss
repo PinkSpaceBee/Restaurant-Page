@@ -2,6 +2,8 @@ section.home-nav {
     display: grid;
     grid-template-rows: 25% 35% 40%;
 
+    width: 100%;
+
     background: no-repeat center/100% url("/src/styles/scss/img/back-main-page-5.jpg");
 
     // lorem ipsum
@@ -35,7 +37,7 @@ section.home-nav {
             @include for-phone-landscape {
                 margin: 0 2rem;
                 padding: 1.5rem;
-                }
+            }
             
             @include for-big-desktop;
             @include for-desktop;
@@ -68,5 +70,11 @@ section.home-nav {
         @include for-phone-landscape {
             margin: 1rem 2rem;
             }
+
+        @include for-big-desktop;
+        @include for-desktop;
+        @include for-tablet {
+            margin: 2rem 4rem 0 2rem;
+        }
     }
 }

@@ -38,6 +38,14 @@ nav {
         @include for-phone {
             grid-column: 1/-1;
         }
+
+        @include for-big-desktop;
+        @include for-desktop;
+        @include for-tablet {
+            justify-self: start;
+            margin-left: 0.5em;
+
+        }
     }
 
     // link wrapper
@@ -54,8 +62,11 @@ nav {
         @include for-big-desktop;
         @include for-desktop;
         @include for-tablet {
-            grid-template-columns: 3fr repeat(3, 0.5fr);
+            grid-template-columns: repeat(3, 0.5fr);
+            justify-self: end;
             align-items: center;
+
+            margin-right: 1em;
         }
     }
 
