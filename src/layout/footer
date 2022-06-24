@@ -1,6 +1,0 @@
-const footerText = document.createElement('footer');
-footerText.textContent = `created by PinkSpaceBee`;
-
-export {
-    footerText
-}

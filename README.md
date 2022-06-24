@@ -4,3 +4,4 @@ Anyway, the goal of this project is to understand things like npm and webpack be
 
 TO-DO:
 - you've got to figure out how to set up sass and not make a mess. do I need to use css-loader? tbh I'm not sure why I should import css files from within JS modules
+- add node_modules to gitignore

@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh; }
+
+main {
+  display: grid;
+  justify-items: center;
+  font-size: 20px; }

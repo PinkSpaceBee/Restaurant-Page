@@ -1,0 +1,10 @@
+main {
+  display: grid; }
+
+.navbar {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  font-size: 20px; }
+
+.menu {
+  background-color: skyblue; }
