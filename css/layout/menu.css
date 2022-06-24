@@ -1,0 +1,25 @@
+section.menu {
+  display: grid;
+  position: relative;
+  overflow: auto;
+  width: 90vw; }
+  section.menu > div {
+    display: grid; }
+    section.menu > div div {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      justify-items: end;
+      margin-bottom: 1em;
+      background-color: pink; }
+      section.menu > div div :first-child {
+        justify-self: start; }
+      section.menu > div div :last-child {
+        grid-column: 1/-1;
+        color: gray;
+        font-size: 14px; }
+  section.menu .title {
+    background-color: pink;
+    margin-top: 0; }
+  section.menu p {
+    font-size: 16px;
+    margin: 0.3em; }
