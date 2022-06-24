@@ -6,27 +6,42 @@ section.home-nav {
 
     // lorem ipsum
     & p {
-        font-size: 26px;
-        background-color: transparentize(mix($keppel, #000, 50%), 0.68);
-        color: mix($mandys-pink, #fff,10%);
-        text-shadow: mix($dorado, #000, 20%) 1px 0 6px;
         margin: 0 2rem;
         padding: 0;
+
+        background-color: transparentize(mix($keppel, #000, 50%), 0.68);
+
+        font-size: 26px;
+        color: mix($mandys-pink, #fff,10%);
+        text-shadow: mix($dorado, #000, 20%) 1px 0 6px;
 
         @include for-phone-landscape {
             margin: 0 2rem;
             }
 
+        @include for-big-desktop;
+        @include for-desktop;
+        @include for-tablet {
+            margin: 0 4rem 0 2rem;
+            padding: 0 2rem;
+        }
 
         &:first-of-type {
             margin-top: 2rem;
-            font: 32px $ms-madi;
             padding-top: 3rem;
+
+            font: 32px $ms-madi;
 
             @include for-phone-landscape {
                 margin: 0 2rem;
                 padding: 1.5rem;
                 }
+            
+            @include for-big-desktop;
+            @include for-desktop;
+            @include for-tablet {
+                padding: 6rem 2rem 0 2rem;
+            }
         }
     }
 
@@ -34,12 +49,14 @@ section.home-nav {
     button {
         margin: 1em;
         height: 3em;
+
         width: 9em;
+
+        background-color: transparentize(mix($mandys-pink, #fff,10%), 0.2);
+        border: 2px solid $keppel;
 
         font: 20px $poppins;
         color: $keppel;
-        background-color: transparentize(mix($mandys-pink, #fff,10%), 0.2);
-        border: 2px solid $keppel;
 
         &:hover,
         &:focus,

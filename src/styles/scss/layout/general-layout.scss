@@ -18,4 +18,10 @@ main {
     height: 100%;
 
     font-size: 20px;
+
+    @include for-big-desktop;
+    @include for-desktop;
+    @include for-tablet {
+        grid-template-rows: 10% 90%;
+    }
 }
