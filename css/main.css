@@ -108,7 +108,7 @@ section.home-nav {
           padding: 1.5rem; } }
       @media (min-width: 600px) {
         section.home-nav p:first-of-type {
-          padding: 6rem 2rem 0 2rem; } }
+          padding: 3rem 2rem 0 2rem; } }
   section.home-nav button {
     margin: 1em;
     height: 3em;
