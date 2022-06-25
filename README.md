@@ -1,7 +1,11 @@
-Okaaaay. A new project. Feeling a bit lost, as usual. 
+Responsive restaurant page built with ES6 modules. 
 
-Anyway, the goal of this project is to understand things like npm and webpack better and to learn how to structure project files, because before it've been a huge mess. Ok, also probably should use ES6 modules?? 
+I started this project to learn how to work with ES6 features like classes and modules, and module bundlerm, namely webpack. That is to say I could've come up with a better idea for a project if I wanted to do something inheritance-related but still, it was fun. 
 
-TO-DO:
-- you've got to figure out how to set up sass and not make a mess. do I need to use css-loader? tbh I'm not sure why I should import css files from within JS modules
-- add node_modules to gitignore
+Take a look!
+
+Built with: 
+
+JavaScript ES6+
+Sass
+webpack
